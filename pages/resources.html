@@ -5,160 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Origami resources, instruction links, diagrams, and tutorials curated by the Greater San Diego Origami Group." />
   <title>Resources — Greater San Diego Origami Group</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <nav class="nav" id="nav">
-    <a href="../index.html" class="nav-logo">GSDOG</a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#features">Features</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="history.html">History</a></li>
-      <li><a href="tribute.html">Tribute</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<nav class="uk-navbar-container" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; top: 0;">
+    <div class="uk-container">
+      <div uk-navbar>
+        <div class="uk-navbar-left">
+          <a href="../index.html" class="uk-navbar-item nav-logo">GSDOG</a>
+        </div>
+        <div class="uk-navbar-right">
+           <ul class="uk-navbar-nav uk-visible@m uk-flex-middle">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li class="uk-active"><a href="resources.html">Resources</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="tribute.html">Tribute</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+          <button class="uk-navbar-toggle uk-hidden@m" type="button" uk-navbar-toggle-icon uk-toggle="target: #mobile-nav"></button>
+        </div>
+      </div>
+    </div>
   </nav>
+  <div id="mobile-nav" class="uk-offcanvas" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar" style="background:var(--black);">
+      <button class="uk-offcanvas-close" type="button" uk-close style="color:white;"></button>
+      <ul class="uk-nav uk-nav-default uk-margin-large-top">
+        <li><a href="../index.html#about" style="color:rgba(255,255,255,0.75);">About</a></li>
+        <li><a href="gallery.html" style="color:rgba(255,255,255,0.75);">Gallery</a></li>
+        <li><a href="resources.html" style="color:rgba(255,255,255,0.75);">Resources</a></li>
+        <li><a href="history.html" style="color:rgba(255,255,255,0.75);">History</a></li>
+        <li><a href="tribute.html" style="color:rgba(255,255,255,0.75);">Tribute</a></li>
+        <li><a href="contact.html" style="color:rgba(255,255,255,0.75);">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 
   <header class="page-hero">
     <span class="eyebrow">Diagrams, Videos & Links</span>
     <h1>Resources</h1>
-    <p>A curated collection of origami instruction, inspiration, and community — for folders of every level.</p>
+    <p>A curated collection of origami instruction and inspiration — for folders of every level.</p>
   </header>
 
   <main>
 
-    <section class="content-section">
-      <div class="container">
+    <section class="uk-section uk-section-large">
+      <div class="uk-container">
         <span class="eyebrow">Start Here</span>
-        <h2>Learning to Fold</h2>
-        <p>Whether you've never folded a thing or you're chasing complex crease patterns, these resources will meet you where you are.</p>
-
-        <div class="resource-list">
-          <a class="resource-card" href="https://www.origami-resource-center.com" target="_blank" rel="noopener">
-            <h4>Origami Resource Center</h4>
-            <p>Step-by-step diagrams for beginners through advanced folders. One of the most comprehensive free collections online.</p>
-          </a>
-          <a class="resource-card" href="https://www.origami-instructions.com" target="_blank" rel="noopener">
-            <h4>Origami Instructions</h4>
-            <p>Clear photo-based instructions for hundreds of models. Great for beginners who prefer pictures over diagrams.</p>
-          </a>
-          <a class="resource-card" href="https://www.youtube.com/@Tadashi_Mori" target="_blank" rel="noopener">
-            <h4>Tadashi Mori on YouTube</h4>
-            <p>High-quality video tutorials ranging from simple to advanced. Exceptional production quality and clear instruction.</p>
-          </a>
-          <a class="resource-card" href="https://www.youtube.com/@OrigamiInstructions" target="_blank" rel="noopener">
-            <h4>Origami Instructions (YouTube)</h4>
-            <p>Hundreds of folding videos from easy to complex. A reliable go-to for following along model by model.</p>
-          </a>
+        <h2 class="uk-heading-small uk-margin-medium-bottom">Learning to Fold</h2>
+        <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
+          <div><a href="https://www.origami-resource-center.com" target="_blank" rel="noopener" class="uk-card uk-card-default uk-card-body uk-card-hover uk-display-block"><h4 class="uk-card-title">Origami Resource Center</h4><p class="uk-text-small uk-text-muted">Step-by-step diagrams for beginners through advanced. One of the most comprehensive free collections online.</p></a></div>
+          <div><a href="https://www.origami-instructions.com" target="_blank" rel="noopener" class="uk-card uk-card-default uk-card-body uk-card-hover uk-display-block"><h4 class="uk-card-title">Origami Instructions</h4><p class="uk-text-small uk-text-muted">Clear photo-based instructions for hundreds of models. Great for beginners who prefer pictures over diagrams.</p></a></div>
+          <div><a href="https://www.youtube.com/@Tadashi_Mori" target="_blank" rel="noopener" class="uk-card uk-card-default uk-card-body uk-card-hover uk-display-block"><h4 class="uk-card-title">Tadashi Mori (YouTube)</h4><p class="uk-text-small uk-text-muted">High-quality video tutorials ranging from simple to advanced. Exceptional production and clear instruction.</p></a></div>
         </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="container">
+    <section class="section-grey uk-section uk-section-large">
+      <div class="uk-container">
         <span class="eyebrow">Community & Organizations</span>
-        <h2>The Origami World</h2>
-        <p>Connect with the wider origami community — national conventions, publications, and fellow enthusiasts.</p>
-
-        <div class="resource-list">
-          <a class="resource-card" href="https://www.origami-usa.org" target="_blank" rel="noopener">
-            <h4>OrigamiUSA</h4>
-            <p>The national organization for origami in America. Annual convention, diagrams library, and membership community.</p>
-          </a>
-          <a class="resource-card" href="https://www.britishorigami.org" target="_blank" rel="noopener">
-            <h4>British Origami Society</h4>
-            <p>One of the oldest origami societies in the world, with a rich publication history and active membership.</p>
-          </a>
-          <a class="resource-card" href="https://www.giladorigami.com" target="_blank" rel="noopener">
-            <h4>Gilad's Origami Page</h4>
-            <p>An encyclopedic database of origami books, designers, and models. The definitive reference for serious folders.</p>
-          </a>
-          <a class="resource-card" href="https://www.langorigami.com" target="_blank" rel="noopener">
-            <h4>Robert J. Lang — Origami</h4>
-            <p>Website of one of the foremost origami artists and theorists in the world. Includes TreeMaker software and complex diagrams.</p>
-          </a>
+        <h2 class="uk-heading-small uk-margin-medium-bottom">The Origami World</h2>
+        <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
+          <div><a href="https://www.origami-usa.org" target="_blank" rel="noopener" class="uk-card uk-card-default uk-card-body uk-card-hover uk-display-block"><h4 class="uk-card-title">OrigamiUSA</h4><p class="uk-text-small uk-text-muted">The national organization for origami in America. Annual convention, diagrams library, and membership community.</p></a></div>
+          <div><a href="https://www.giladorigami.com" target="_blank" rel="noopener" class="uk-card uk-card-default uk-card-body uk-card-hover uk-display-block"><h4 class="uk-card-title">Gilad's Origami Page</h4><p class="uk-text-small uk-text-muted">An encyclopedic database of origami books, designers, and models. The definitive reference for serious folders.</p></a></div>
+          <div><a href="https://www.langorigami.com" target="_blank" rel="noopener" class="uk-card uk-card-default uk-card-body uk-card-hover uk-display-block"><h4 class="uk-card-title">Robert J. Lang</h4><p class="uk-text-small uk-text-muted">Website of one of the foremost origami artists and theorists in the world. Includes TreeMaker software.</p></a></div>
+          <div><a href="https://www.tubisorigami.com" target="_blank" rel="noopener" class="uk-card uk-card-default uk-card-body uk-card-hover uk-display-block"><h4 class="uk-card-title">Arnold Tubis</h4><p class="uk-text-small uk-text-muted">The archive of our beloved co-coordinator — boxes, bowls, books, and a lifetime of folding.</p></a></div>
+          <div><a href="https://www.britishorigami.org" target="_blank" rel="noopener" class="uk-card uk-card-default uk-card-body uk-card-hover uk-display-block"><h4 class="uk-card-title">British Origami Society</h4><p class="uk-text-small uk-text-muted">One of the oldest origami societies in the world, with a rich publication history and active membership.</p></a></div>
+          <div><a href="https://www.reddit.com/r/origami" target="_blank" rel="noopener" class="uk-card uk-card-default uk-card-body uk-card-hover uk-display-block"><h4 class="uk-card-title">r/origami</h4><p class="uk-text-small uk-text-muted">An active community for sharing folds, asking questions, and discovering new models.</p></a></div>
         </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="container">
-        <span class="eyebrow">Go Deeper</span>
-        <h2>Diagrams & Crease Patterns</h2>
-        <p>For intermediate to advanced folders ready to tackle complex models and mathematical origami.</p>
-
-        <div class="resource-list">
-          <a class="resource-card" href="https://www.origamidb.com" target="_blank" rel="noopener">
-            <h4>Origami Database</h4>
-            <p>A searchable database of origami diagrams and crease patterns from designers around the world.</p>
-          </a>
-          <a class="resource-card" href="https://www.flickr.com/groups/origami" target="_blank" rel="noopener">
-            <h4>Origami on Flickr</h4>
-            <p>Thousands of photos shared by folders globally — a great source of inspiration and community connection.</p>
-          </a>
-          <a class="resource-card" href="https://www.reddit.com/r/origami" target="_blank" rel="noopener">
-            <h4>r/origami</h4>
-            <p>An active community for sharing folds, asking questions, and discovering new models from folders around the world.</p>
-          </a>
-          <a class="resource-card" href="https://www.langorigami.com/article/treemaker" target="_blank" rel="noopener">
-            <h4>TreeMaker (Robert Lang)</h4>
-            <p>Free software for designing your own origami bases mathematically. Used by serious designers worldwide.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="container">
+    <section class="uk-section uk-section-large">
+      <div class="uk-container">
         <span class="eyebrow">Member Recommendations</span>
-        <h2>Books We Love</h2>
-        <p>These titles have inspired and educated our members over the years — including works by our own founders.</p>
-
-        <div class="resource-list">
-          <div class="resource-card">
-            <h4>Florence Temko — <em>Origami for Beginners</em></h4>
-            <p>One of many beloved books by our co-founder Florence Temko, making origami accessible to all ages.</p>
-          </div>
-          <div class="resource-card">
-            <h4>Robert J. Lang — <em>Origami Design Secrets</em></h4>
-            <p>The definitive book on the mathematical principles behind designing original origami models.</p>
-          </div>
-          <div class="resource-card">
-            <h4>Peter Engel — <em>Origami from Angelfish to Zen</em></h4>
-            <p>A beautiful book exploring the philosophy, art, and craft of paper folding at a deep level.</p>
-          </div>
-          <div class="resource-card">
-            <h4>Eric Gjerde — <em>Origami Tessellations</em></h4>
-            <p>The go-to guide for tessellation folding — geometric patterns that tile to create stunning surfaces.</p>
-          </div>
+        <h2 class="uk-heading-small uk-margin-medium-bottom">Books We Love</h2>
+        <div class="uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid>
+          <div><div class="uk-card uk-card-default uk-card-body"><h4 class="uk-card-title uk-text-small">Florence Temko<br><em>Origami for Beginners</em></h4><p class="uk-text-small uk-text-muted">One of many beloved books by our co-founder, making origami accessible to all ages.</p></div></div>
+          <div><div class="uk-card uk-card-default uk-card-body"><h4 class="uk-card-title uk-text-small">Robert J. Lang<br><em>Origami Design Secrets</em></h4><p class="uk-text-small uk-text-muted">The definitive book on the mathematical principles behind designing original origami models.</p></div></div>
+          <div><div class="uk-card uk-card-default uk-card-body"><h4 class="uk-card-title uk-text-small">Peter Engel<br><em>Origami from Angelfish to Zen</em></h4><p class="uk-text-small uk-text-muted">A beautiful exploration of the philosophy, art, and craft of paper folding.</p></div></div>
+          <div><div class="uk-card uk-card-default uk-card-body"><h4 class="uk-card-title uk-text-small">Eric Gjerde<br><em>Origami Tessellations</em></h4><p class="uk-text-small uk-text-muted">The go-to guide for tessellation folding — geometric patterns that create stunning surfaces.</p></div></div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="footer-logo">GSDOG</span>
-        <p>Greater San Diego Origami Group<br>San Diego, California</p>
+  <footer class="site-footer">
+    <div class="uk-container">
+      <div class="uk-grid" uk-grid>
+        <div class="uk-width-1-3@m"><span class="footer-logo">GSDOG</span><p class="uk-text-small">Greater San Diego Origami Group<br>San Diego, California</p></div>
+        <div class="uk-width-2-3@m"><ul class="uk-subnav uk-text-small"><li><a href="../index.html">Home</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="resources.html">Resources</a></li><li><a href="history.html">History</a></li><li><a href="tribute.html">Tribute</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       </div>
-      <nav class="footer-nav">
-        <a href="../index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="resources.html">Resources</a>
-        <a href="history.html">History</a>
-        <a href="tribute.html">Tribute</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <p class="footer-copy">© 2025 Greater San Diego Origami Group. Made with paper and care.</p>
     </div>
-    <p class="footer-copy">© 2025 Greater San Diego Origami Group. Made with paper and care.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/js/uikit-icons.min.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

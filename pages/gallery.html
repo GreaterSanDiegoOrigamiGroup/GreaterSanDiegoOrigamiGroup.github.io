@@ -3,152 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Photo gallery of the Greater San Diego Origami Group — member work, exhibitions, and events." />
+  <meta name="description" content="Photo gallery of the Greater San Diego Origami Group." />
   <title>Gallery — Greater San Diego Origami Group</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <nav class="nav" id="nav">
-    <a href="../index.html" class="nav-logo">GSDOG</a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="../index.html#features">Features</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="history.html">History</a></li>
-      <li><a href="tribute.html">Tribute</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <nav class="uk-navbar-container" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; top: 0;">
+    <div class="uk-container">
+      <div uk-navbar>
+        <div class="uk-navbar-left">
+         <a href="../index.html" class="uk-navbar-item nav-logo">GSDOG</a>
+        </div>
+        <div class="uk-navbar-right">
+           <ul class="uk-navbar-nav uk-visible@m uk-flex-middle">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li class="uk-active"><a href="resources.html">Resources</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="tribute.html">Tribute</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+          <button class="uk-navbar-toggle uk-hidden@m" type="button" uk-navbar-toggle-icon uk-toggle="target: #mobile-nav"></button>
+        </div>
+      </div>
+    </div>
   </nav>
+  <div id="mobile-nav" class="uk-offcanvas" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar" style="background:var(--black);">
+      <button class="uk-offcanvas-close" type="button" uk-close style="color:white;"></button>
+      <ul class="uk-nav uk-nav-default uk-margin-large-top">
+        <li><a href="../index.html#about" style="color:rgba(255,255,255,0.75);">About</a></li>
+        <li><a href="gallery.html" style="color:rgba(255,255,255,0.75);">Gallery</a></li>
+        <li><a href="resources.html" style="color:rgba(255,255,255,0.75);">Resources</a></li>
+        <li><a href="history.html" style="color:rgba(255,255,255,0.75);">History</a></li>
+        <li><a href="tribute.html" style="color:rgba(255,255,255,0.75);">Tribute</a></li>
+        <li><a href="contact.html" style="color:rgba(255,255,255,0.75);">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 
   <header class="page-hero">
     <span class="eyebrow">Member Work & Events</span>
     <h1>Gallery</h1>
-    <p>Decades of folding, exhibiting, and celebrating the art of paper — captured in photographs.</p>
+    <p>Decades of folding, exhibiting, and celebrating the art of paper.</p>
   </header>
 
   <main>
-    <!-- HOW TO ADD PHOTOS -->
+
     <!--
-      TO ADD YOUR PHOTOS:
-      1. Drop your image files into the /images/ folder
-      2. Copy one of the <div class="gallery-item"> blocks below
-      3. Replace "src" with your filename: src="../images/yourphoto.jpg"
-      4. Update the alt text and caption
-      That's it! No code knowledge required beyond copy-paste.
+      HOW TO ADD PHOTOS:
+      1. Drop images into /images/
+      2. Replace href and src with your filename
+      3. Update data-caption
+      UIkit handles the lightbox automatically.
     -->
 
-    <section class="content-section">
-      <div class="container">
-        <h2>Member Creations</h2>
-        <p>From traditional cranes to complex tessellations, our members create extraordinary work.</p>
+    <section class="uk-section uk-section-large">
+      <div class="uk-container">
+        <span class="eyebrow">Member Creations</span>
+        <h2 class="uk-heading-small uk-margin-medium-bottom">From Our Members</h2>
 
-        <div class="gallery-grid">
-
-          <!-- Add real images by replacing the placeholder divs below -->
-          <!-- Example with real image:
-          <div class="gallery-item">
-            <img src="../images/crane-2023.jpg" alt="Traditional crane by Jane Smith, 2023" loading="lazy" />
-            <div class="gallery-item-caption">Traditional crane — Jane Smith, 2023</div>
-          </div>
-          -->
-
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◈<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Member creation</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◇<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Member creation</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◆<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Member creation</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◈<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Member creation</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◇<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Member creation</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◆<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Member creation</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◈<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Member creation</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◇<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Member creation</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◆<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Member creation</div>
-          </div>
-
+        <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-grid-small" uk-grid uk-lightbox="animation: fade">
+          <div><a href="images/photo-1.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◈<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-2.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◇<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-3.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◆<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-4.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◈<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-5.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◇<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-6.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◆<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-7.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◈<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-8.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◇<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-9.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◆<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-10.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◈<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-11.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◇<span>Add Photo</span></div></a></div>
+          <div><a href="images/photo-12.jpg" data-caption="Member creation"><div class="tribute-photo-placeholder">◆<span>Add Photo</span></div></a></div>
         </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <div class="container">
-        <h2>Exhibitions & Events</h2>
-        <p>Our members have displayed work at galleries, museums, and community events across San Diego.</p>
+    <section class="section-grey uk-section uk-section-large">
+      <div class="uk-container">
+        <span class="eyebrow">Exhibitions & Events</span>
+        <h2 class="uk-heading-small uk-margin-medium-bottom">Out in the World</h2>
 
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◈<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Mingei International Museum</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◇<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Exhibition display</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◆<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Group meeting</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◈<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Community event</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◇<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Workshop session</div>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-placeholder">◆<span>Add Photo</span></div>
-            <div class="gallery-item-caption">Group photo</div>
-          </div>
+        <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-small" uk-grid uk-lightbox="animation: fade">
+          <div><a href="images/exhibit-1.jpg" data-caption="Mingei International Museum"><div class="tribute-photo-placeholder">◈<span>Add Photo</span></div></a></div>
+          <div><a href="images/exhibit-2.jpg" data-caption="Exhibition display"><div class="tribute-photo-placeholder">◇<span>Add Photo</span></div></a></div>
+          <div><a href="images/exhibit-3.jpg" data-caption="Group meeting"><div class="tribute-photo-placeholder">◆<span>Add Photo</span></div></a></div>
+          <div><a href="images/exhibit-4.jpg" data-caption="Community event"><div class="tribute-photo-placeholder">◈<span>Add Photo</span></div></a></div>
+          <div><a href="images/exhibit-5.jpg" data-caption="Workshop session"><div class="tribute-photo-placeholder">◇<span>Add Photo</span></div></a></div>
+          <div><a href="images/exhibit-6.jpg" data-caption="Group photo"><div class="tribute-photo-placeholder">◆<span>Add Photo</span></div></a></div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="footer-logo">GSDOG</span>
-        <p>Greater San Diego Origami Group<br>San Diego, California</p>
+  <footer class="site-footer">
+    <div class="uk-container">
+      <div class="uk-grid" uk-grid>
+        <div class="uk-width-1-3@m">
+          <span class="footer-logo">GSDOG</span>
+          <p class="uk-text-small">Greater San Diego Origami Group<br>San Diego, California</p>
+        </div>
+        <div class="uk-width-2-3@m">
+          <ul class="uk-subnav uk-text-small">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="tribute.html">Tribute</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <nav class="footer-nav">
-        <a href="../index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="resources.html">Resources</a>
-        <a href="history.html">History</a>
-        <a href="tribute.html">Tribute</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <p class="footer-copy">© 2025 Greater San Diego Origami Group. Made with paper and care.</p>
     </div>
-    <p class="footer-copy">© 2025 Greater San Diego Origami Group. Made with paper and care.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/js/uikit-icons.min.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>
