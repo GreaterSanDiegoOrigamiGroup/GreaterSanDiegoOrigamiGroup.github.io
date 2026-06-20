@@ -89,14 +89,30 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   grid-template-columns: 1fr 1fr;
   min-height: 90vh;
 }
+
 .hero-text-panel {
   background: var(--gray-800);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5rem 4rem;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  position: relative;
+  z-index: 1;
 }
-.hero-text-panel .eyebrow { color: rgba(248, 248, 248, 0.5); }
+.hero-text-panel .eyebrow { color: rgba(255,255,255,0.4); }
+
+/* Dark overlay — hidden on desktop, shows on mobile over the slideshow bg */
+.hero-overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+.hero-text-content {
+  position: relative;
+  z-index: 1;
+}
 
 .hero-slide-panel {
   position: relative;
@@ -104,11 +120,28 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   min-height: 500px;
 }
 
-/* Mobile: stack vertically */
+/* Mobile: slideshow becomes background, text overlays it */
 @media (max-width: 959px) {
-  .hero-split { grid-template-columns: 1fr; }
-  .hero-text-panel { padding: 4rem 2rem; min-height: 50vh; }
-  .hero-slide-panel { min-height: 50vh; }
+  .hero-split {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    min-height: 100svh;
+  }
+  .hero-text-panel {
+    grid-row: 1;
+    grid-column: 1;
+    background: transparent;
+    padding: clamp(5rem, 10vw, 7rem) clamp(1.5rem, 6vw, 3rem) clamp(3rem, 8vw, 5rem);
+    min-height: 100svh;
+    justify-content: flex-end;
+  }
+  .hero-overlay { display: block; }
+  .hero-slide-panel {
+    grid-row: 1;
+    grid-column: 1;
+    min-height: 100svh;
+  }
+  .slide-dots { bottom: 2rem; }
 }
 
 /* ---- KEN BURNS SLIDESHOW ---- */
@@ -120,7 +153,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: kenBurns 8s ease-in-out forwards;
+  animation: kenBurns 8s ease-in-out;
   animation-play-state: paused;
   transition: opacity 1.2s ease;
 }
