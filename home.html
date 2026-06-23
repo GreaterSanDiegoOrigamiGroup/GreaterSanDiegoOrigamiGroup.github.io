@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Greater San Diego Origami Group — a community of paper folders celebrating the art of origami since the early 1990s." />
+  <meta name="keywords" content="San Diego origami, paper folding, origami group, origami San Diego, GSDOG" />
+  <title>Greater San Diego Origami Group</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="uk-navbar-container" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; top: 0;">
+    <div class="uk-container">
+      <div uk-navbar>
+        <div class="uk-navbar-left">
+          <a href="index.html" class="uk-navbar-item nav-logo">Greater San Diego Origami Group</a>
+        </div>
+        <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav uk-visible@m">
+            <li><a href="#about">About</a></li>
+            <li><a href="pages/gallery.html">Gallery</a></li>
+            <li><a href="pages/resources.html">Resources</a></li>
+            <li><a href="pages/history.html">History</a></li>
+            <li><a href="pages/tribute.html">Tribute</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+          <button class="uk-navbar-toggle uk-hidden@m" type="button" uk-navbar-toggle-icon uk-toggle="target: #mobile-nav"></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div id="mobile-nav" class="uk-offcanvas" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-dark">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <ul class="uk-nav uk-nav-default uk-margin-large-top">
+        <li><a href="#about">About</a></li>
+        <li><a href="pages/gallery.html">Gallery</a></li>
+        <li><a href="pages/resources.html">Resources</a></li>
+        <li><a href="pages/history.html">History</a></li>
+        <li><a href="pages/tribute.html">Tribute</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+<!-- HERO: 2-panel split -->
+<section class="hero-split">
+
+  <!-- LEFT: static text -->
+  <div class="hero-text-panel">
+    <div class="hero-overlay"></div>
+    <div class="hero-text-content">
+      <span class="eyebrow">San Diego, California</span>
+      <h1 class="display-title">The Art of<br><em>Paper Folding</em></h1>
+      <p class="hero-sub">A community of origami enthusiasts bringing people together through the joy of folding since the early 1990s.</p>
+      <a href="#about" class="uk-button uk-button-primary">Explore the Group</a>
+    </div>
+    <div class="hero-slant"></div>
+  </div>
+
+  <!-- RIGHT: Ken Burns slideshow -->
+  <div class="hero-slide-panel" id="hero">
+    <div class="slideshow" id="slideshow">
+      <div class="slide active" style="background-image: url('images/DSC_0044.webp');"></div>
+      <div class="slide" style="background-image: url('images/DSC_0045.webp');"></div>
+      <div class="slide" style="background-image: url('images/DSC_1582.webp');"></div>
+      <div class="slide" style="background-image: url('images/DSC_1583.webp');"></div>
+    </div>
+    <div class="slide-dots" id="slideDots"></div>
+  </div>
+
+</section>
+
+  <!-- FOLDING BANNER -->
+  <div class="fold-banner" id="about">
+    <div class="fold-line fold-line-1"></div>
+    <div class="fold-line fold-line-2"></div>
+    <div class="fold-line fold-line-3"></div>
+    <div class="fold-banner-content">
+      <span class="eyebrow" style="color:rgba(255,255,255,0.4);">What We Do</span>
+      <h2 class="fold-banner-title">A Community<br><em>Built on Folds</em></h2>
+      <p class="fold-banner-sub">From monthly meetups to museum exhibitions, our members share a deep love for paper.</p>
+    </div>
+    <div class="fold-crane" aria-hidden="true">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="100,20 160,80 130,85 100,60" fill="rgba(0,0,0,0.06)" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+        <polygon points="100,20 40,80 70,85 100,60" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+        <polygon points="100,60 70,85 100,140 130,85" fill="rgba(0,0,0,0.08)" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+        <polygon points="70,85 20,110 100,140" fill="rgba(0,0,0,0.03)" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+        <polygon points="130,85 180,110 100,140" fill="rgba(0,0,0,0.05)" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+        <polygon points="100,140 90,180 110,180" fill="rgba(0,0,0,0.06)" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- WHAT WE DO -->
+<section class="uk-section uk-section-large">
+  <div class="uk-container">
+    <div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-grid-match" uk-grid>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body" uk-parallax="y: 60,0; easing: 0; viewport: 0.5">
+          <span class="uk-icon uk-margin-small-bottom" uk-icon="icon: users; ratio: 1.8"></span>
+          <h3 class="uk-card-title">Monthly Meetings</h3>
+          <p class="">We gather regularly to fold together, share techniques, and welcome newcomers of all skill levels.</p>
+          <a href="pages/contact.html" class="uk-text-small">Find a meeting →</a>
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body" uk-parallax="y: 100,0; easing: 0; viewport: 0.5">
+          <span class="uk-icon uk-margin-small-bottom" uk-icon="icon: image; ratio: 1.8"></span>
+          <h3 class="uk-card-title">Community Exhibits</h3>
+          <p class="">Our members have shown work in galleries and museums, including the celebrated Origami Masterworks at Mingei International.</p>
+          <a href="pages/gallery.html" class="uk-text-small">See the gallery →</a>
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body" uk-parallax="y: 140,0; easing: 0; viewport: 0.5">
+          <span class="uk-icon uk-margin-small-bottom" uk-icon="icon: file-text; ratio: 1.8"></span>
+          <h3 class="uk-card-title">Instruction & Learning</h3>
+          <p class="">Curated links to diagrams, video tutorials, and resources for all levels — from first crane to complex tessellation.</p>
+          <a href="pages/resources.html" class="uk-text-small">Browse resources →</a>
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default uk-card-body" uk-parallax="y: 180,0; easing: 0; viewport: 0.5">
+          <span class="uk-icon uk-margin-small-bottom" uk-icon="icon: star; ratio: 1.8"></span>
+          <h3 class="uk-card-title">Member Spotlights</h3>
+          <p class="">Celebrating the incredible work of our members — from traditional forms to innovative contemporary designs.</p>
+          <a href="pages/gallery.html" class="uk-text-small">Meet our folders →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- PHOTO STRIP -->
+  <section class="uk-section uk-section-large section-alt">
+    <div class="uk-container">
+      <div class="uk-margin-large-bottom">
+        <span class="eyebrow">Photography</span>
+        <h2 class="uk-heading-medium">The Work</h2>
+      </div>
+      <div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-grid-small" uk-grid uk-lightbox="animation: fade">
+        <div>
+          <a href="images/DSC_0044.webp" data-caption="Member creation">
+            <img src="images/DSC_0044.webp" alt="Origami piece" class="gallery-thumb" />
+          </a>
+        </div>
+        <div>
+          <a href="images/DSC_0045.webp" data-caption="Member creation">
+            <img src="images/DSC_0045.webp" alt="Origami piece" class="gallery-thumb" />
+          </a>
+        </div>
+        <div>
+          <a href="images/DSC_1582.webp" data-caption="Member creation">
+            <img src="images/DSC_1582.webp" alt="Origami piece" class="gallery-thumb" />
+          </a>
+        </div>
+        <div>
+          <a href="images/DSC_1583.webp" data-caption="Member creation">
+            <img src="images/DSC_1583.webp" alt="Origami piece" class="gallery-thumb" />
+          </a>
+        </div>
+      </div>
+      <div class="uk-margin-large-top uk-text-center">
+        <a href="pages/gallery.html" class="uk-button uk-button-default">View Full Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY TEASER -->
+  <section class="uk-section uk-section-large">
+    <div class="uk-container">
+      <div class="uk-grid uk-grid-large uk-flex-middle" uk-grid>
+        <div class="uk-width-1-2@m">
+          <span class="eyebrow">Est. early 1990s</span>
+          <h2 class="uk-heading-medium">Rooted in a<br>Rich History</h2>
+          <p class="uk-text-muted uk-margin">Our group was founded by <strong>Florence Temko</strong>, a prolific origami author, and <strong>V'Ann Cornelius</strong>, who co-curated one of the first major museum origami exhibitions in the world. The group is co-coordinated by <strong>Arnold Tubis</strong> — retired physics professor, author of nine origami books, and an internationally exhibited designer whose box design graces this very site.</p>
+          <a href="pages/history.html" class="uk-button uk-button-primary">Read Our Story</a>
+        </div>
+        <div class="uk-width-1-2@m uk-text-center uk-visible@m">
+          <p class="kanji-deco">折</p>
+          <p class="uk-text-small uk-text-muted" style="letter-spacing:0.2em;text-transform:uppercase;">to fold</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIBUTE TEASER -->
+  <section class="uk-section uk-section-large section-alt uk-text-center">
+  <div class="uk-container uk-container-small">
+    <span class="eyebrow">Our People</span>
+    <h2 class="uk-heading-medium">The Folders Behind This Group</h2>
+    <p class="section-lead uk-margin-auto">From our current coordinator Perla Myers to founders Florence Temko and V'Ann Cornelius, and our beloved co-coordinator Arnold Tubis — these are the people who gave GSDOG its heart.</p>
+    <a href="pages/tribute.html" class="uk-button uk-button-default uk-margin-top">Meet Our People</a>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="uk-container">
+      <div class="uk-grid uk-grid-large" uk-grid>
+        <div class="uk-width-1-3@m">
+          <span class="footer-logo">GSDOG</span>
+          <p class="uk-text-small">Greater San Diego Origami Group<br>San Diego, California</p>
+        </div>
+        <div class="uk-width-2-3@m">
+          <div class="uk-child-width-1-3@s" uk-grid>
+            <div>
+              <p class="footer-col-head">Pages</p>
+              <ul class="uk-list uk-text-small">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/gallery.html">Gallery</a></li>
+                <li><a href="pages/resources.html">Resources</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-col-head">&nbsp;</p>
+              <ul class="uk-list uk-text-small">
+                <li><a href="pages/history.html">History</a></li>
+                <li><a href="pages/tribute.html">Tribute</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-col-head">Links</p>
+              <ul class="uk-list uk-text-small">
+                <li><a href="https://www.origami-usa.org" target="_blank">OrigamiUSA</a></li>
+                <li><a href="https://www.tubisorigami.com" target="_blank">Arnold Tubis</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 Greater San Diego Origami Group. Made with paper and care.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/js/uikit-icons.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
