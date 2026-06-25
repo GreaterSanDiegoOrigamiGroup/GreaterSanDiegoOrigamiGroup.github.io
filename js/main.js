@@ -95,3 +95,13 @@ if ('IntersectionObserver' in window) {
     observer.observe(el);
   });
 }
+
+// ============ FOOTER INCLUDE ============
+const footerPlaceholder = document.getElementById('footer-placeholder');
+if (footerPlaceholder) {
+  fetch('/includes/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      footerPlaceholder.innerHTML = html;
+    });
+}

@@ -159,7 +159,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
 .fold-banner {
   position: relative;
   background: var(--gray-200);
-  padding: 5rem 4rem;
+  padding: 2rem 4rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -355,4 +355,40 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+
+/* ---- PAGE SUBNAV ---- */
+.page-subnav {
+  width: 100%;
+  background: var(--gray-800);
+  border-bottom: 1px solid var(--gray-300);
+  padding: 1rem 0;
+  position: sticky;
+  top: 60px;
+  z-index: 99;
+}
+.page-subnav-list {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.page-subnav-pill {
+  display: inline-block;
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--gray-400);
+  background: transparent;
+  color: var(--gray-100) !important;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.page-subnav-pill:hover {
+  background: var(--gray-500);
+  border-color: var(--gray-800);
+  color: var(--gray-100) !important;
 }

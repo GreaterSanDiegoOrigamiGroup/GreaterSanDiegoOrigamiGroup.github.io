@@ -10,40 +10,45 @@
 </head>
 <body>
 
-  <!-- NAV -->
-<nav class="uk-navbar-container" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; top: 0;">
-    <div class="uk-container">
-      <div uk-navbar>
-        <div class="uk-navbar-left">
-          <a href="../index.html" class="uk-navbar-item nav-logo">Greater San Diego Origami Group</a>
-        </div>
-        <div class="uk-navbar-right">
-           <ul class="uk-navbar-nav uk-visible@m uk-flex-middle">
-          <li><a href="../index.html#about">About</a></li>
+<!-- navigation -->
+<div class="main-nav">
+  <nav class="uk-navbar-container" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; top: 0;">
+  <div class="uk-container">
+    <div uk-navbar>
+      <div class="uk-navbar-left">
+        <a href="../index.html" class="uk-navbar-item nav-logo">Greater San Diego Origami Group</a>
+      </div>
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@m">
+          <li><a href="about.html">About</a></li>
+          <li><a href="meetings.html">Meetings</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li class="uk-active"><a href="resources.html">Resources</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="tribute.html">Tribute</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-          <button class="uk-navbar-toggle uk-hidden@m" type="button" uk-navbar-toggle-icon uk-toggle="target: #mobile-nav"></button>
-        </div>
+        <button class="uk-navbar-toggle uk-hidden@m" type="button" uk-navbar-toggle-icon uk-toggle="target: #mobile-nav"></button>
       </div>
     </div>
-  </nav>
-  <div id="mobile-nav" class="uk-offcanvas" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar" style="background:var(--black);">
-      <button class="uk-offcanvas-close" type="button" uk-close style="color:white;"></button>
-      <ul class="uk-nav uk-nav-default uk-margin-large-top">
-        <li><a href="../index.html#about" style="color:rgba(255,255,255,0.75);">About</a></li>
-        <li><a href="gallery.html" style="color:rgba(255,255,255,0.75);">Gallery</a></li>
-        <li><a href="resources.html" style="color:rgba(255,255,255,0.75);">Resources</a></li>
-        <li><a href="history.html" style="color:rgba(255,255,255,0.75);">History</a></li>
-        <li><a href="tribute.html" style="color:rgba(255,255,255,0.75);">Tribute</a></li>
-        <li><a href="contact.html" style="color:rgba(255,255,255,0.75);">Contact</a></li>
-      </ul>
-    </div>
   </div>
+</nav>
+
+<div id="mobile-nav" class="uk-offcanvas" uk-offcanvas="overlay: true">
+  <div class="uk-offcanvas-bar uk-offcanvas-bar-dark">
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+    <ul class="uk-nav uk-nav-default uk-margin-large-top">
+      <li><a href="about.html">About</a></li>
+      <li><a href="meetings.html">Meetings</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="legacy.html">Legacy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
+</div>
 
   <header class="page-hero">
     <span class="eyebrow">The Leaders</span>
