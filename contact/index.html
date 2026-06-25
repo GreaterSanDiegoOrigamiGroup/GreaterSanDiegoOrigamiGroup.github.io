@@ -112,27 +112,40 @@
           <h2 class="uk-heading-medium">Send a Message</h2>
           <p class="uk-text-muted">Have a question? Want to share something? Reach out — we'd love to hear from you.</p>
           <!-- Sign up at formspree.io and replace REPLACE_WITH_YOUR_ID with your form ID -->
-          <form action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST" class="uk-form-stacked uk-margin-medium-top">
-            <div class="uk-margin">
-              <label class="uk-form-label">Name</label>
-              <div class="uk-form-controls">
-                <input class="uk-input" type="text" name="name" required placeholder="Your name" />
-              </div>
+          <form action="https://api.web3forms.com/submit" method="POST" class="uk-form-stacked uk-margin-medium-top">
+
+          <input type="hidden" name="access_key" value="30f7b4a7-d108-4eee-8a13-231c892ac567" />
+
+          <!-- Honeypot spam protection -->
+          <input type="checkbox" name="botcheck" style="display:none;" />
+
+          <!-- Optional: customize the email subject -->
+          <input type="hidden" name="subject" value="New message from sdorigami.org" />
+
+          <div class="uk-margin">
+            <label class="uk-form-label">Name</label>
+            <div class="uk-form-controls">
+              <input class="uk-input" type="text" name="name" required placeholder="Your name" />
             </div>
-            <div class="uk-margin">
-              <label class="uk-form-label">Email</label>
-              <div class="uk-form-controls">
-                <input class="uk-input" type="email" name="email" required placeholder="your@email.com" />
-              </div>
+          </div>
+
+          <div class="uk-margin">
+            <label class="uk-form-label">Email</label>
+            <div class="uk-form-controls">
+              <input class="uk-input" type="email" name="email" required placeholder="your@email.com" />
             </div>
-            <div class="uk-margin">
-              <label class="uk-form-label">Message</label>
-              <div class="uk-form-controls">
-                <textarea class="uk-textarea" name="message" rows="5" required placeholder="What's on your mind?"></textarea>
-              </div>
+          </div>
+
+          <div class="uk-margin">
+            <label class="uk-form-label">Message</label>
+            <div class="uk-form-controls">
+              <textarea class="uk-textarea" name="message" rows="5" required placeholder="What's on your mind?"></textarea>
             </div>
-            <button type="submit" class="uk-button uk-button-primary">Send Message</button>
-          </form>
+          </div>
+
+          <button type="submit" class="uk-button uk-button-primary">Send Message</button>
+
+        </form>
         </div>
 
       </div>
