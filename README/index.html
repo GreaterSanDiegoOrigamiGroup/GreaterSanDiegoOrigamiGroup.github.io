@@ -1,0 +1,91 @@
+<h1>Greater San Diego Origami Group — Website</h1>
+<p>A clean, fast, fully hand-coded website. No frameworks, no dependencies, no monthly fees.</p>
+<hr>
+<h2>File Structure</h2>
+<pre><code>sdorigami/
+├── index.html          ← Homepage
+├── css/
+│   └── style.css       ← All styles — edit freely
+├── js/
+│   └── main.js         ← Nav behavior, scroll reveal, lightbox
+├── images/             ← Drop ALL your photos here
+│   └── (your photos)
+└── pages/
+    ├── gallery.html    ← Photo gallery
+    ├── resources.html  ← Origami links
+    ├── history.html    ← Group history &amp; timeline
+    ├── tribute.html    ← Tribute to founders
+    └── contact.html    ← Meeting info &amp; contact form
+</code></pre>
+<hr>
+<h2>How to Add Photos</h2>
+<ol>
+<li>Drop your <code>.jpg</code> or <code>.png</code> files into the <code>/images/</code> folder</li>
+<li>Open <code>pages/gallery.html</code> in a text editor</li>
+<li>Find a <code>&lt;div class=&quot;gallery-item&quot;&gt;</code> block with a placeholder</li>
+<li>Replace it with:</li>
+</ol>
+<pre><code class="language-html">&lt;div class=&quot;gallery-item&quot;&gt;
+  &lt;img src=&quot;../images/YOUR-FILENAME.jpg&quot; alt=&quot;Description of photo&quot; loading=&quot;lazy&quot; /&gt;
+  &lt;div class=&quot;gallery-item-caption&quot;&gt;Your caption here&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<ol start="5">
+<li>Save and upload. Done!</li>
+</ol>
+<p>For the homepage photo strip, open <code>index.html</code> and replace the <code>&lt;img&gt;</code> src attributes in the <code>.strip-item</code> divs.</p>
+<hr>
+<h2>How to Update Meeting Info</h2>
+<p>Open <code>pages/contact.html</code> and find the two <code>&lt;div class=&quot;contact-detail&quot;&gt;</code> blocks for <strong>When</strong> and <strong>Where</strong>. Replace the placeholder text with your actual meeting details.</p>
+<hr>
+<h2>How to Add Timeline Events (History Page)</h2>
+<p>Open <code>pages/history.html</code> and copy/paste this block inside <code>&lt;div class=&quot;timeline&quot;&gt;</code>:</p>
+<pre><code class="language-html">&lt;div class=&quot;timeline-item&quot;&gt;
+  &lt;span class=&quot;timeline-year&quot;&gt;YEAR&lt;/span&gt;
+  &lt;h3&gt;Event Title&lt;/h3&gt;
+  &lt;p&gt;Description of what happened.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<hr>
+<h2>How to Set Up the Contact Form (Free)</h2>
+<ol>
+<li>Go to <a href="https://formspree.io">formspree.io</a> and create a free account</li>
+<li>Create a new form — you'll get an endpoint URL like <code>https://formspree.io/f/abcdefgh</code></li>
+<li>Open <code>pages/contact.html</code> and replace <code>REPLACE_WITH_YOUR_ID</code> in the form action with your endpoint</li>
+<li>Done — form submissions go straight to your email</li>
+</ol>
+<hr>
+<h2>How to Publish on GitHub Pages (Free Hosting)</h2>
+<ol>
+<li>Create a free account at <a href="https://github.com">github.com</a></li>
+<li>Click <strong>New Repository</strong> — name it <code>sdorigami</code> (or anything you like)</li>
+<li>Upload all these files (drag and drop works in the browser)</li>
+<li>Go to <strong>Settings → Pages</strong></li>
+<li>Under &quot;Source&quot;, select <strong>main branch</strong> and click Save</li>
+<li>Your site is live at <code>https://yourusername.github.io/sdorigami</code></li>
+</ol>
+<p><strong>To use a custom domain</strong> (like <code>sdorigamigroup.org</code>):</p>
+<ul>
+<li>Buy domain from Namecheap, Google Domains, etc. (~$12/yr)</li>
+<li>In GitHub Pages settings, enter your custom domain</li>
+<li>Follow GitHub's DNS instructions (takes ~24 hours to activate)</li>
+</ul>
+<hr>
+<h2>Colors &amp; Fonts</h2>
+<p>Everything is in <code>css/style.css</code> under <code>:root {}</code> at the top:</p>
+<pre><code class="language-css">--indigo:  #1e2a4a   ← Dark navy (primary)
+--gold:    #c9a84c   ← Gold accent
+--ivory:   #f7f4ee   ← Light background
+</code></pre>
+<p>Fonts are loaded from Google Fonts:</p>
+<ul>
+<li><strong>Cormorant Garamond</strong> — headings (elegant, editorial)</li>
+<li><strong>DM Sans</strong> — body text (clean, readable)</li>
+</ul>
+<hr>
+<h2>Tips</h2>
+<ul>
+<li>All images should be under 500KB for fast loading. Use <a href="https://squoosh.app">Squoosh</a> (free) to compress them.</li>
+<li>Add <code>alt=&quot;&quot;</code> text to every image — helps search engines and screen readers.</li>
+<li>The site is fully responsive — looks great on phones too.</li>
+</ul>
