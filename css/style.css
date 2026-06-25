@@ -3,7 +3,7 @@
    UIkit 3 handles almost everything.
    We only add: fonts, hero split, slideshow,
    timeline, tribute placeholders, footer.
-   Palette: greys only, no black, no dark mode.
+   Palette: greys + warm gold accent.
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
@@ -17,6 +17,10 @@
   --gray-600: #666666;
   --gray-700: #444444;
   --gray-800: #222222;
+
+  --gold:       #b8922a;
+  --gold-light: #d4ab4e;
+  --gold-pale:  #f5ead8;
 
   --ff-display: 'Cormorant Garamond', Georgia, serif;
   --ff-body:    'DM Sans', system-ui, sans-serif;
@@ -34,13 +38,13 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   line-height: 1.05;
   color: var(--gray-100);
 }
-.display-title em { font-style: italic; color: rgba(255,255,255,0.6); }
+.display-title em { font-style: italic; color: var(--gold-light); }
 
 .eyebrow {
   font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gray-500);
+  color: var(--gold);
   font-weight: 500;
   display: block;
   margin-bottom: 0.75rem;
@@ -80,7 +84,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
 }
 .uk-navbar-nav > li > a:hover,
 .uk-navbar-nav > li.uk-active > a {
-  color: var(--gray-800) !important;
+  color: var(--gold) !important;
 }
 
 /* ---- HERO SPLIT ---- */
@@ -96,7 +100,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   justify-content: center;
   padding: 5rem 4rem;
 }
-.hero-text-panel .eyebrow { color: rgba(248, 248, 248, 0.5); }
+.hero-text-panel .eyebrow { color: var(--gold-light); }
 
 .hero-slide-panel {
   position: relative;
@@ -120,7 +124,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: kenBurns 8s ease-in-out forwards;
+  animation: kenBurns 8s ease-in-out;
   animation-play-state: paused;
   transition: opacity 1.2s ease;
 }
@@ -153,12 +157,12 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   padding: 0;
   transition: background 0.3s, transform 0.3s;
 }
-.slide-dot.active { background: #fff; transform: scale(1.4); }
+.slide-dot.active { background: var(--gold-light); transform: scale(1.4); }
 
 /* ---- FOLD BANNER ---- */
 .fold-banner {
   position: relative;
-  background: var(--gray-200);
+  background: var(--gold);
   padding: 2rem 4rem;
   overflow: hidden;
   display: flex;
@@ -170,17 +174,18 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   font-family: var(--ff-display);
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 300;
-  color: var(--gray-800);
+  color: var(--gray-100);
   line-height: 1.1;
   margin: 0.5rem 0 1rem;
 }
-.fold-banner-title em { font-style: italic; color: var(--gray-500); }
-.fold-banner-sub { font-size: 1rem; color: var(--gray-600); line-height: 1.8; max-width: 480px; margin: 0; }
+.fold-banner-title em { font-style: italic; color: rgba(255,255,255,0.65); }
+.fold-banner-sub { font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.8; max-width: 480px; margin: 0; }
+.fold-banner .eyebrow { color: rgba(255,255,255,0.55); }
 .fold-line { position: absolute; pointer-events: none; }
-.fold-line-1 { width: 200%; height: 1px; top: 35%; left: -10%; transform: rotate(-8deg); background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent); }
-.fold-line-2 { width: 200%; height: 1px; top: 55%; left: -10%; transform: rotate(-8deg); background: linear-gradient(90deg, transparent, rgba(0,0,0,0.04), transparent); }
-.fold-line-3 { width: 1px; height: 200%; top: -20%; right: 28%; transform: rotate(8deg); background: linear-gradient(180deg, transparent, rgba(0,0,0,0.05), transparent); }
-.fold-crane { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); width: clamp(140px, 18vw, 260px); opacity: 0.7; }
+.fold-line-1 { width: 200%; height: 1px; top: 35%; left: -10%; transform: rotate(-8deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); }
+.fold-line-2 { width: 200%; height: 1px; top: 55%; left: -10%; transform: rotate(-8deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); }
+.fold-line-3 { width: 1px; height: 200%; top: -20%; right: 28%; transform: rotate(8deg); background: linear-gradient(180deg, transparent, rgba(255,255,255,0.15), transparent); }
+.fold-crane { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); width: clamp(140px, 18vw, 260px); opacity: 0.25; }
 @media (max-width: 640px) { .fold-banner { padding: 3rem 1.5rem; } .fold-crane { display: none; } }
 
 /* ---- UIKIT CARD OVERRIDES ---- */
@@ -199,11 +204,12 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   font-weight: 400 !important;
   color: var(--gray-800) !important;
 }
+.uk-card-default .uk-icon { color: var(--gold); }
 
 /* ---- BUTTONS ---- */
 .uk-button-primary {
-  background: var(--gray-100);
-  color: var(--gray-800);
+  background: var(--gold);
+  color: var(--gray-100);
   border-radius: 0;
   font-family: var(--ff-body);
   font-size: 0.75rem;
@@ -211,7 +217,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   text-transform: uppercase;
   border: none;
 }
-.uk-button-primary:hover { background: var(--gray-300); color: var(--gray-800); }
+.uk-button-primary:hover { background: var(--gold-light); color: var(--gray-100); }
 
 .uk-button-default {
   background: transparent;
@@ -223,7 +229,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.uk-button-default:hover { background: var(--gray-200); color: var(--gray-100); border-color: var(--gray-800); }
+.uk-button-default:hover { background: var(--gray-800); color: var(--gray-100); border-color: var(--gray-800); }
 
 /* ---- SECTION BACKGROUNDS ---- */
 .section-alt { background: var(--gray-200); }
@@ -237,6 +243,29 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   transition: transform 0.3s ease;
 }
 .gallery-thumb:hover { transform: scale(1.03); }
+
+/* ---- GALLERY PLACEHOLDER ---- */
+.gallery-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--gray-200);
+  border: 1px dashed var(--gray-400);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+  font-size: 1.5rem;
+  gap: 0.5rem;
+  transition: background 0.2s ease;
+}
+.gallery-placeholder:hover { background: var(--gray-300); }
+.gallery-placeholder span {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+}
 
 /* ---- HISTORY KANJI DECO ---- */
 .kanji-deco {
@@ -254,7 +283,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 1px;
-  background: var(--gray-300);
+  background: var(--gold-pale);
 }
 .timeline-item { padding-left: 2.5rem; margin-bottom: 3rem; position: relative; }
 .timeline-item::before {
@@ -263,13 +292,13 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   left: -4px; top: 7px;
   width: 9px; height: 9px;
   border-radius: 50%;
-  background: var(--gray-700);
+  background: var(--gold);
 }
 .timeline-year {
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gray-500);
+  color: var(--gold);
   display: block;
   margin-bottom: 0.4rem;
 }
@@ -311,7 +340,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   padding: 3rem 2rem 5rem;
   text-align: center;
 }
-.page-hero .eyebrow { color: rgba(255,255,255,0.3); }
+.page-hero .eyebrow { color: var(--gold-light); }
 .page-hero h1 {
   font-family: var(--ff-display);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -331,7 +360,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   font-family: var(--ff-display);
   font-size: 1.5rem;
   letter-spacing: 0.15em;
-  color: var(--gray-800);
+  color: var(--gold);
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -343,7 +372,7 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   margin-bottom: 0.75rem;
 }
 .site-footer a { color: var(--gray-600); font-size: 0.85rem; }
-.site-footer a:hover { color: var(--gray-800); }
+.site-footer a:hover { color: var(--gold); }
 .footer-copy {
   border-top: 1px solid var(--gray-300);
   margin-top: 3rem;
@@ -353,16 +382,11 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   color: var(--gray-500);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { transition: none !important; animation: none !important; }
-}
-
-
 /* ---- PAGE SUBNAV ---- */
 .page-subnav {
   width: 100%;
   background: var(--gray-800);
-  border-bottom: 1px solid var(--gray-300);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 1rem 0;
   position: sticky;
   top: 60px;
@@ -378,9 +402,9 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   display: inline-block;
   padding: 0.4rem 1.1rem;
   border-radius: 999px;
-  border: 1.5px solid var(--gray-400);
+  border: 1.5px solid rgba(255,255,255,0.2);
   background: transparent;
-  color: var(--gray-100) !important;
+  color: rgba(255,255,255,0.7) !important;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -388,7 +412,11 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   transition: all 0.2s ease;
 }
 .page-subnav-pill:hover {
-  background: var(--gray-500);
-  border-color: var(--gray-800);
+  background: var(--gold);
+  border-color: var(--gold);
   color: var(--gray-100) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
 }
