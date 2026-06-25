@@ -20,7 +20,7 @@
 
   --accent:       #7c21b4;
   --accent-light: rgb(179, 117, 220);
-  --accent-pale:  #d3d3ef;
+  --accent-pale:  #f3f3ff;
   --accent-dark:  #5a188c;
 
   --ff-display: 'Cormorant Garamond', Georgia, serif;
@@ -448,4 +448,41 @@ h1,h2,h3,h4 { font-family: var(--ff-display); font-weight: 300; }
   font-style: italic;
   color: var(--accent-light);
   display: block;
+}
+
+/* ---- LEGACY PAGE ---- */
+.legacy-block {
+  background: var(--gray-200);
+  border: 1px solid var(--gray-300);
+  padding: 1.5rem;
+  height: 100%;
+}
+.legacy-block-title {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gray-300);
+}
+.legacy-quote {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.legacy-quote cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  font-style: normal;
 }
