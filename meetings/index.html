@@ -86,44 +86,113 @@
   <main>
 
     <!-- CALENDAR -->
-    <section id="calendar" class="uk-section ">
-      <div class="uk-container">
-        <span class="eyebrow">When We Meet</span>
-        <h2 class="uk-heading-medium">Calendar</h2>
-        <p class="uk-text-muted uk-width-2-3@m">We meet virtually on the first Saturday of every month. All skill levels welcome — free to attend, no registration required.</p>
+    <section id="calendar" class="uk-section">
+  <div class="uk-container">
+    <span class="eyebrow">When We Meet</span>
+    <h2 class="uk-heading-medium">Meetings</h2>
+    <p class="uk-text-muted uk-width-2-3@m">We meet virtually on the first Saturday of every month. All skill levels welcome — free to attend.</p>
 
-        <div class="uk-grid uk-grid-large uk-margin-large-top uk-flex-middle" uk-grid>
-          <div class="uk-width-2-3@m">
-            <!-- Replace with Google Calendar embed -->
-            <div style="background:var(--gray-200);border:1px solid var(--gray-300);border-radius:2px;padding:3rem;text-align:center;color:var(--gray-500);">
-              <span uk-icon="icon: calendar; ratio: 2" style="margin-bottom:1rem;display:block;"></span>
-              <p class="uk-text-small" style="letter-spacing:0.1em;text-transform:uppercase;">Google Calendar Coming Soon</p>
-              <p class="uk-text-small uk-text-muted">Replace this block with your Google Calendar embed code</p>
+    <div class="uk-grid uk-grid-large uk-margin-large-top" uk-grid>
+
+      <!-- MAIN: VIRTUAL MEETINGS -->
+      <div class="uk-width-2-3@m">
+
+        <div class="uk-card uk-card-default uk-card-body uk-margin-bottom">
+          <h3 class="uk-card-title">Virtual Meeting Details</h3>
+          <dl class="uk-description-list uk-margin-small-top">
+            <dt>When</dt>
+            <dd>First Saturday of every month</dd>
+            <dt>Time</dt>
+            <dd>1:00–3:00 PM Pacific Time</dd>
+            <dt>Where</dt>
+            <dd>Virtual — via Zoom</dd>
+            <dt>Level</dt>
+            <dd>Beginners to intermediate</dd>
+            <dt>Attendance</dt>
+            <dd>20–30 folders</dd>
+            <dt>Cost</dt>
+            <dd>Free — no registration required</dd>
+            <dt>Zoom Link</dt>
+            <dd><a href="mailto:sdorigami.site@gmail.com?subject=I'd like to join a meeting" style="color:var(--accent);">Contact us for link</a></dd>
+            <dt>Contact</dt>
+            <dd><a href="mailto:sdorigami.site@gmail.com" style="color:var(--accent);">sdorigami.site@gmail.com</a></dd>
+          </dl>
+          <a href="mailto:sdorigami.site@gmail.com?subject=I'd like to join a meeting" class="uk-button uk-button-primary uk-margin-top">Get the Zoom Link</a>
+        </div>
+
+        <div class="uk-child-width-1-2@s" uk-grid>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <span class="uk-icon uk-margin-small-bottom" uk-icon="icon: users; ratio: 1.5" style="color:var(--accent);display:block;"></span>
+              <h4 class="uk-card-title">Who Comes</h4>
+              <p class="uk-text-small uk-text-muted">Folders of all ages and experience levels. Average attendance is 20–30 people. No age requirements.</p>
             </div>
           </div>
-          <div class="uk-width-1-3@m">
+          <div>
             <div class="uk-card uk-card-default uk-card-body">
-              <h3 class="uk-card-title">Meeting Details</h3>
-              <dl class="uk-description-list uk-margin-small-top">
-                <dt>When</dt>
-                <dd>First Saturday of every month</dd>
-                <dt>Time</dt>
-                <dd>Update with time — e.g. 1:00–3:00 PM PT</dd>
-                <dt>Where</dt>
-                <dd>Virtual — via Zoom</dd>
-                <dt>Cost</dt>
-                <dd>Free — no registration required</dd>
-                <dt>Zoom Link</dt>
-                <dd><a href="#">Update with Zoom link</a></dd>
-                <dt>Contact</dt>
-                <dd><a href="mailto:sdorigami.site@gmail.com">sdorigami.site@gmail.com</a></dd>
-              </dl>
-              <a href="/pages/contact.html" class="uk-button uk-button-primary uk-margin-top uk-width-1-1">Get in Touch</a>
+              <span class="uk-icon uk-margin-small-bottom" uk-icon="icon: pencil; ratio: 1.5" style="color:var(--accent);display:block;"></span>
+              <h4 class="uk-card-title">What We Do</h4>
+              <p class="uk-text-small uk-text-muted">Members teach new and favorite models and share their recent origami works. Bring something you'd like to teach — everyone has something to offer.</p>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <span class="uk-icon uk-margin-small-bottom" uk-icon="icon: mail; ratio: 1.5" style="color:var(--accent);display:block;"></span>
+              <h4 class="uk-card-title">Get the Zoom Link</h4>
+              <p class="uk-text-small uk-text-muted">Contact Perla to register for meeting reminders and receive the Zoom link before each session.</p>
+              <a href="mailto:sdorigami.site@gmail.com?subject=Please add me to the mailing list" class="uk-text-small">Get in touch →</a>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <span class="uk-icon uk-margin-small-bottom" uk-icon="icon: question; ratio: 1.5" style="color:var(--accent);display:block;"></span>
+              <h4 class="uk-card-title">Questions?</h4>
+              <p class="uk-text-small uk-text-muted">Not sure what to expect? Check our FAQ or drop us a line — we're happy to help.</p>
+              <a href="#faq" class="uk-text-small" uk-scroll>Read the FAQ →</a>
             </div>
           </div>
         </div>
+
       </div>
-    </section>
+
+      <!-- SIDEBAR: IN-PERSON EVENTS -->
+      <div class="uk-width-1-3@m">
+        <span class="eyebrow">In-Person</span>
+        <h3 class="uk-heading-small uk-margin-small-bottom">Upcoming Events</h3>
+
+        <!-- NO EVENTS STATE — delete this when you have an event -->
+        <div class="no-events-block">
+          <span uk-icon="icon: location; ratio: 1.5" style="color:var(--gray-400);display:block;margin-bottom:1rem;"></span>
+          <p class="uk-text-small uk-text-muted">No in-person events scheduled right now. Check back soon!</p>
+          <a href="mailto:sdorigami.site@gmail.com?subject=Please add me to the mailing list" class="uk-button uk-button-default uk-margin-small-top">Get Notified</a>
+        </div>
+        <!-- END NO EVENTS STATE -->
+
+        <!-- EVENT CARD — copy and paste this block to add an event, delete the no-events block above
+        <div class="event-card">
+          <div class="event-card-date">
+            <span class="event-card-month">JAN</span>
+            <span class="event-card-day">18</span>
+          </div>
+          <div class="event-card-details">
+            <h4 class="event-card-title">Event Name Here</h4>
+            <p class="uk-text-small uk-text-muted">
+              <span uk-icon="icon: clock; ratio: 0.8"></span> 1:00–4:00 PM PT
+            </p>
+            <p class="uk-text-small uk-text-muted">
+              <span uk-icon="icon: location; ratio: 0.8"></span> Venue, Address, San Diego CA
+            </p>
+            <p class="uk-text-small uk-text-muted">Description of the event.</p>
+            <a href="mailto:sdorigami.site@gmail.com?subject=RSVP" class="uk-button uk-button-primary uk-margin-small-top">RSVP</a>
+          </div>
+        </div>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- WHAT TO BRING -->
     <section id="bring" class="uk-section section-alt">
