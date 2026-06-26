@@ -432,7 +432,7 @@ h1,h2,h3,h4,h5,h6, .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2
 
 /* ---- WELCOME STATEMENT ---- */
 .welcome-statement {
-  background: var(--gray-800);
+  background: var(--accent);
   padding: 5rem 2rem;
 }
 .welcome-quote {
