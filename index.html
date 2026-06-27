@@ -3,77 +3,272 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>San Diego Origami Group — Coming Soon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f5f5f5;
-      text-align: center;
-      padding: 2rem;
-    }
-    .crane {
-      width: clamp(80px, 15vw, 140px);
-      margin: 0 auto 2rem;
-      opacity: 0.3;
-    }
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.5rem, 7vw, 5rem);
-      font-weight: 300;
-      color: #222;
-      line-height: 1.05;
-      margin-bottom: 1rem;
-    }
-    h1 em { font-style: italic; color: #888; }
-    p {
-      font-size: 1rem;
-      color: #888;
-      max-width: 380px;
-      margin: 0 auto 2rem;
-      line-height: 1.8;
-    }
-    .eyebrow {
-      font-size: 0.7rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #aaa;
-      display: block;
-      margin-bottom: 1rem;
-    }
-    a {
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #444;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 2px;
-      text-decoration: none;
-    }
-    a:hover { color: #222; border-color: #222; }
-  </style>
+  <meta name="description" content="The Greater San Diego Origami Group — a community of paper folders celebrating the art of origami since the early 1990s." />
+  <meta name="keywords" content="San Diego origami, paper folding, origami group, origami San Diego, GSDOG" />
+  <title>Greater San Diego Origami Group</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-  <div>
-    <div class="crane" aria-hidden="true">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="100,20 160,80 130,85 100,60" fill="rgba(0,0,0,0.08)" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
-        <polygon points="100,20 40,80 70,85 100,60" fill="rgba(0,0,0,0.05)" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
-        <polygon points="100,60 70,85 100,140 130,85" fill="rgba(0,0,0,0.1)" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
-        <polygon points="70,85 20,110 100,140" fill="rgba(0,0,0,0.04)" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
-        <polygon points="130,85 180,110 100,140" fill="rgba(0,0,0,0.06)" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
-        <polygon points="100,140 90,180 110,180" fill="rgba(0,0,0,0.08)" stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+
+{% include "nav.html" %}
+
+<!-- HERO: 2-panel split -->
+<section class="hero-split">
+  <div class="hero-text-panel">
+    <div class="hero-overlay"></div>
+    <div class="hero-text-content">
+      <span class="eyebrow">San Diego, California</span>
+      <h1 class="display-title">The Art of<br><em>Paper Folding</em></h1>
+      <p class="hero-sub">A community of origami enthusiasts bringing people together through the joy of folding since the early 1990s.</p>
+      <a href="#welcome" class="uk-button" uk-scroll="offset: 80">Explore the Group</a>
+    </div>
+  </div>
+  <div class="hero-slide-panel" id="hero">
+    <div class="slideshow" id="slideshow">
+      <div class="slide active" style="background-image: url('/images/DSC_0044.webp');"></div>
+      <div class="slide" style="background-image: url('/images/DSC_0045.webp');"></div>
+      <div class="slide" style="background-image: url('/images/DSC_1582.webp');"></div>
+      <div class="slide" style="background-image: url('/images/DSC_1583.webp');"></div>
+    </div>
+    <div class="slide-dots" id="slideDots"></div>
+  </div>
+</section>
+
+<!-- NEXT MEETING STRIP -->
+<div class="meeting-strip">
+  <div class="uk-container">
+    <div class="uk-flex uk-flex-middle uk-flex-between uk-flex-wrap" style="gap:1rem;">
+      <div class="uk-flex uk-flex-middle" style="gap:2rem;flex-wrap:wrap;">
+        <span class="eyebrow" style="margin:0;">Next Meeting</span>
+        <span style="font-family:var(--ff-display);font-size:1.2rem;color:var(--gray-800);">First Saturday of Every Month</span>
+        <span style="color:var(--gray-500);font-size:0.9rem;">Update time · Zoom</span>
+      </div>
+      <a href="/meetings/" class="uk-button uk-button-primary">Join Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- WELCOME + PHOTO GRID -->
+<section id="welcome" class="uk-section">
+  <div class="uk-container">
+    <div class="uk-grid uk-grid-large uk-flex-middle" uk-grid>
+      <div class="uk-width-1-2@m">
+        <span class="eyebrow">Welcome</span>
+        <h2 class="uk-heading-medium">What is the Greater San Diego Origami Group?</h2>
+        <p class="uk-text-muted">We are a community of paper folders based in San Diego, California — brought together by a shared love of origami in all its forms. From simple cranes to complex tessellations, from seasoned artists to first-time folders, everyone has a place here.</p>
+        <a href="/about/" class="uk-button uk-button-default uk-margin-top">Learn About Us</a>
+      </div>
+      <div class="uk-width-1-2@m">
+        <!-- ASYMMETRIC PHOTO GRID -->
+        <div class="photo-grid-asymmetric" uk-lightbox>
+          <a href="/images/Practice-shape-peter-barnes-frederic-chopin.jpg" data-caption="Member creation" class="photo-grid-main">
+            <img src="/images/Practice-shape-peter-barnes-frederic-chopin.jpg" alt="Origami piece" />
+          </a>
+          <div class="photo-grid-side">
+            <a href="/images/so-cool-joseph-hwang.jpg" data-caption="Member creation" class="photo-grid-side-item">
+              <img src="/images/so-cool-joseph-hwang.jpg" alt="Origami piece" />
+            </a>
+            <a href="/images/dragonfly-steve-hecht.jpg" data-caption="Member creation" class="photo-grid-side-item">
+              <img src="/images/dragonfly-steve-hecht.jpg" alt="Origami piece" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME STATEMENT -->
+<section class="welcome-statement">
+  <div class="uk-container uk-container-small uk-text-center">
+    <p class="welcome-quote">Everyone is welcome.<br><em>No experience necessary.</em></p>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="about" class="uk-section section-alt">
+  <div class="uk-container">
+    <div class="uk-margin-medium-bottom">
+      <span class="eyebrow">What We Do</span>
+      <h2 class="uk-heading-medium">A Community<br>Built on Folds</h2>
+      <p class="section-lead">From monthly meetups to museum exhibitions, our members share a deep love for paper.</p>
+    </div>
+    <div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-grid-match" uk-grid>
+      <div>
+        <div class="uk-card uk-card-default" uk-parallax="y: 60,0; easing: 0; viewport: 0.5">
+          <div class="uk-card-media-top">
+            <div class="card-photo-placeholder">
+              <img src="/images/Butterfly-Steve-Hecht.jpg" alt="Monthly meeting" />
+            </div>
+          </div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Monthly Meetings</h3>
+            <p class="uk-text-muted uk-text-small">We gather virtually every first Saturday to fold together, share techniques, and welcome newcomers of all skill levels.</p>
+            <a href="/meetings/" class="uk-text-small">Find a meeting →</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default" uk-parallax="y: 100,0; easing: 0; viewport: 0.5">
+          <div class="uk-card-media-top">
+            <div class="card-photo-placeholder">
+             <img src="/images/GSDOG_1.JPG" alt="Community exhibit" />
+             
+            </div>
+          </div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Community Exhibits</h3>
+            <p class="uk-text-muted uk-text-small">Our members have shown work in galleries and museums, including the celebrated Origami Masterworks at Mingei International.</p>
+            <a href="/gallery/" class="uk-text-small">See the gallery →</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default" uk-parallax="y: 140,0; easing: 0; viewport: 0.5">
+          <div class="uk-card-media-top">
+            <div class="card-photo-placeholder">
+              <img src="/images/Box-Top-Arnold-Tubis.jpg" alt="Learning origami" />
+            </div>
+          </div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Instruction & Learning</h3>
+            <p class="uk-text-muted uk-text-small">Curated links to diagrams, video tutorials, and resources for all levels — from first crane to complex tessellation.</p>
+            <a href="/learn/" class="uk-text-small">Browse resources →</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="uk-card uk-card-default" uk-parallax="y: 180,0; easing: 0; viewport: 0.5">
+          <div class="uk-card-media-top">
+            <div class="card-photo-placeholder">
+              <img src="/images/martini-glass-steve-hecht.jpg" alt="Member creation" />
+            </div>
+          </div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Member Spotlights</h3>
+            <p class="uk-text-muted uk-text-small">Celebrating the incredible work of our members — from traditional forms to innovative contemporary designs.</p>
+            <a href="/gallery/" class="uk-text-small">Meet our folders →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL WIDTH PHOTO -->
+<div class="full-photo-section">
+  <img src="/images/DSC_1583.webp" alt="Origami piece" />
+  <div class="full-photo-overlay">
+    <div>
+      <span class="eyebrow" style="color:rgba(255,255,255,0.6);">From Our Gallery</span>
+      <p style="font-family:var(--ff-display);font-size:clamp(1.5rem,3vw,2.5rem);font-weight:300;color:white;margin:0;">The Work of Our Members</p>
+      <a href="/gallery/" style="font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-top:0.5rem;display:block;">View full gallery →</a>
+    </div>
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<section class="pull-quote-section">
+  <div class="uk-container uk-container-small uk-text-center">
+    <div class="pull-quote-crane" aria-hidden="true">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="80">
+        <polygon points="100,20 160,80 130,85 100,60" fill="rgba(124,33,180,0.08)" stroke="rgba(124,33,180,0.3)" stroke-width="1"/>
+        <polygon points="100,20 40,80 70,85 100,60" fill="rgba(124,33,180,0.06)" stroke="rgba(124,33,180,0.3)" stroke-width="1"/>
+        <polygon points="100,60 70,85 100,140 130,85" fill="rgba(124,33,180,0.1)" stroke="rgba(124,33,180,0.3)" stroke-width="1"/>
+        <polygon points="70,85 20,110 100,140" fill="rgba(124,33,180,0.04)" stroke="rgba(124,33,180,0.2)" stroke-width="1"/>
+        <polygon points="130,85 180,110 100,140" fill="rgba(124,33,180,0.06)" stroke="rgba(124,33,180,0.2)" stroke-width="1"/>
+        <polygon points="100,140 90,180 110,180" fill="rgba(124,33,180,0.08)" stroke="rgba(124,33,180,0.3)" stroke-width="1"/>
       </svg>
     </div>
-    <span class="eyebrow">San Diego, California</span>
-    <h1>Something beautiful<br><em>is folding.</em></h1>
-    <p>The Greater San Diego Origami Group is coming soon. Check back shortly.</p>
-    <a href="mailto:sdorigami.site@gmail.com">Get in touch</a>
+    <blockquote class="home-pull-quote">
+      "In origami, a single sheet of paper becomes something that could not have been imagined from looking at the flat square."
+    </blockquote>
+    <cite class="home-pull-cite">— Robert J. Lang, Origami Design Secrets</cite>
   </div>
+</section>
+
+<!-- MASONRY PHOTO GALLERY -->
+<section class="uk-section">
+  <div class="uk-container">
+    <div class="uk-margin-medium-bottom uk-flex uk-flex-between uk-flex-middle">
+      <div>
+        <span class="eyebrow">Photography</span>
+        <h2 class="uk-heading-medium" style="margin:0;">The Work</h2>
+      </div>
+      <a href="/gallery/" class="uk-button uk-button-default">View All</a>
+    </div>
+    <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid uk-lightbox="animation: fade">
+      <!--<div><a href="/images/DSC_0044.webp" data-caption="Member creation"><img src="/images/DSC_0044.webp" alt="Origami piece" class="gallery-thumb" loading="lazy" /></a></div>
+      <div><a href="/images/DSC_0045.webp" data-caption="Member creation"><img src="/images/DSC_0045.webp" alt="Origami piece" class="gallery-thumb" loading="lazy" /></a></div>
+      <div><a href="/images/DSC_1582.webp" data-caption="Member creation"><img src="/images/DSC_1582.webp" alt="Origami piece" class="gallery-thumb" loading="lazy" /></a></div>-->
+      <div><a href="/images/box-top-2-arnold-tubis.jpg" data-caption="Member creation"><img src="/images/box-top-2-arnold-tubis.jpg" alt="Origami piece" class="gallery-thumb" loading="lazy" /></a></div>
+      <div><a href="/images/beetle-joseph-hwang.jpg" data-caption="Member creation"><img src="/images/beetle-joseph-hwang.jpg" alt="Yellow Flower by Joseph Hwang" class="gallery-thumb" loading="lazy" /></a></div>
+      <div><a href="/images/AlexNguyen-dragon-2.jpg" data-caption="Alex Nguyen with his favorite dragon model, Fiery Dragon, made from Kami paper"><img src="/images/AlexNguyen-dragon-2.jpg" alt="Alex Nguyen'S Fiery Dragon" class="gallery-thumb" loading="lazy" /></a></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY TEASER -->
+<section class="uk-section section-alt">
+  <div class="uk-container">
+    <div class="uk-grid uk-grid-large uk-flex-middle" uk-grid>
+      <div class="uk-width-1-2@m">
+        <span class="eyebrow">Est. early 1990s</span>
+        <h2 class="uk-heading-medium">Rooted in a<br>Rich History</h2>
+        <p class="uk-text-muted uk-margin">Our group was founded by <strong>Florence Temko</strong>, a prolific origami author, and <strong>V'Ann Cornelius</strong>, who co-curated one of the first major museum origami exhibitions in the world. Their legacy lives in every fold our members make today.</p>
+        <a href="/about/" class="uk-button uk-button-primary">Read Our Story</a>
+      </div>
+      <div class="uk-width-1-2@m uk-text-center uk-visible@m">
+        <p class="kanji-deco">折</p>
+        <p class="uk-text-small uk-text-muted" style="letter-spacing:0.2em;text-transform:uppercase;">to fold</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR PEOPLE TEASER -->
+<section class="uk-section uk-text-center">
+  <div class="uk-container uk-container-small">
+    <span class="eyebrow">Our People</span>
+    <h2 class="uk-heading-medium">The Folders Behind This Group</h2>
+    <p class="section-lead uk-margin-auto">From our current coordinator Perla Myers to founders Florence Temko and V'Ann Cornelius, and our beloved co-coordinator Arnold Tubis — these are the people who gave GSDOG its heart.</p>
+    <a href="/legacy/" class="uk-button uk-button-default uk-margin-top">Meet Our People</a>
+  </div>
+</section>
+
+<!-- MAILING LIST -->
+<section id="mailing" class="uk-section uk-section-large section-alt">
+  <div class="uk-container">
+    <div class="uk-grid uk-grid-large uk-flex-middle" uk-grid>
+      <div class="uk-width-1-2@m">
+        <span class="eyebrow">Stay Connected</span>
+        <h2 class="uk-heading-medium">Join Our Mailing List</h2>
+        <p class="uk-text-muted">Get meeting reminders, event announcements, guest folder news, and origami updates delivered straight to your inbox.</p>
+        <ul class="uk-list uk-list-bullet uk-text-muted uk-text-small uk-margin-medium-top">
+          <li>Monthly meeting reminders with Zoom link</li>
+          <li>Announcements about special events and guest folders</li>
+          <li>Convention news from the origami world</li>
+          <li>Occasional highlights from our members</li>
+        </ul>
+      </div>
+      <div class="uk-width-1-2@m">
+        <div class="mailing-signup-box uk-text-center">
+          <span uk-icon="icon: mail; ratio: 2" style="color:var(--accent);display:block;margin-bottom:1rem;"></span>
+          <!--<h4 style="font-family:var(--ff-display);font-weight:300;font-size:1.5rem;margin-bottom:0.75rem;">Join Our Mailing List</h4>-->
+          <p class="uk-text-small uk-text-muted uk-margin-small-bottom">Click below and we'll add you to our list for meeting reminders and origami news.</p>
+          <a href="mailto:sdorigami.site@gmail.com?subject=I'd like to join the mailing list" class="uk-button uk-button-primary">Join the Mailing List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.0/dist/js/uikit-icons.min.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
